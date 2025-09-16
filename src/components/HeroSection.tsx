@@ -27,40 +27,41 @@ const HeroSection = () => {
             </Badge>
 
             {/* Main heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Transforma tu empresa con{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Inteligencia Artificial
-                </span>{" "}
-                segura y productiva
-              </h1>
-              
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Ayudo a directivos y equipos a adoptar IA de forma estratégica, 
-                eliminando riesgos y maximizando la rentabilidad de cada proceso automatizado.
-              </p>
-            </div>
+<div className="space-y-4 text-center flex flex-col items-center">
+  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+    Transforma tu empresa con{" "}
+    <span className="bg-gradient-primary bg-clip-text text-transparent">
+      Inteligencia Artificial
+    </span>{" "}
+    segura y productiva
+  </h1>
+  
+  <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+    Ayudo a directivos y equipos a adoptar IA de forma estratégica, 
+    eliminando riesgos y maximizando la rentabilidad de cada proceso automatizado.
+  </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                variant="hero" 
-                size="xl"
-                className="group"
-              >
-                Agenda tu Consultoría Gratuita
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="xl"
-                className="border-primary/20 hover:border-primary"
-              >
-                Descarga tu Guía Gratuita
-              </Button>
-            </div>
+  {/* CTAs */}
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <Button 
+      variant="hero" 
+      size="xl"
+      className="group"
+    >
+      Agenda tu Consultoría Gratuita
+      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+    </Button>
+    
+    <Button 
+      variant="outline" 
+      size="xl"
+      className="border-primary/20 hover:border-primary"
+    >
+      Descarga tu Guía Gratuita
+    </Button>
+  </div>
+</div>
+
 
             {/* Social proof metrics */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
@@ -90,22 +91,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Trust indicators / Logos placeholder */}
-          <div className="hidden lg:block">
-            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-card border border-border/50">
-              <h3 className="text-lg font-semibold mb-6 text-center">Empresas que confían en nuestra experiencia</h3>
-              <div className="grid grid-cols-2 gap-6 opacity-60">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-12 bg-muted rounded-lg flex items-center justify-center">
-                    <span className="text-muted-foreground font-medium">Logo {i}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+          
       {/* Floating elements */}
       <div className="absolute top-20 right-10 w-20 h-20 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
