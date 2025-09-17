@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Brain } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-ia-empresarial.png"; // 👈 importa tu logo (sin espacios en el nombre)
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,10 +20,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="p-2 bg-gradient-primary rounded-lg">
-              <Brain className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl font-bold text-foreground">IA Empresarial</span>
+            <img
+              src={logo}
+              alt="IA Empresarial"
+              className="h-10 w-auto" // 👈 ajusta la altura aquí
+            />
+            <span className="text-xl font-bold text-foreground">
+              IA Empresarial
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -39,17 +44,18 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-<div className="hidden md:block">
-  <a 
-    href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Button variant="cta" size="lg">
-      Agenda tu Consulta
-    </Button>
-  </a>
-</div>
+          <div className="hidden md:block">
+            <a
+              href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="cta" size="lg">
+                Agenda tu Consulta
+              </Button>
+            </a>
+          </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
@@ -77,9 +83,15 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="mt-4 px-3">
-                <Button variant="cta" className="w-full">
-                  Agenda tu Consulta
-                </Button>
+                <a
+                  href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="cta" className="w-full">
+                    Agenda tu Consulta
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -90,3 +102,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
