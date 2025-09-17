@@ -37,16 +37,20 @@ const HeroSection: React.FC = () => {
               </a>
             </Button>
 
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-primary/20 hover:border-primary"
-            >
-              Descarga tu Guía Gratuita
-            </Button>
-          </div>
-        </div>
-      </div>
+<a
+  href="https://drive.google.com/file/d/1rsI_9XBWwREtj6R_ZHnz3DxSs6Qp-faS/view?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    variant="outline"
+    size="xl"
+    className="border-primary/20 hover:border-primary"
+  >
+    Descarga tu Guía Gratuita
+  </Button>
+</a>
+
 
       {/* Decoración opcional */}
       <div className="pointer-events-none absolute top-20 right-10 w-20 h-20 bg-accent/10 rounded-full blur-3xl animate-pulse" />
