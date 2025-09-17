@@ -3,14 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import {
-  MessageSquare,
-  Mail,
-  Linkedin,
+import { 
+  MessageSquare, 
+  Phone, 
+  Mail, 
+  Linkedin, 
   Clock,
   CheckCircle,
   Calendar,
-  Zap,
+  Zap
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -19,10 +20,10 @@ const ContactSection = () => {
       icon: <MessageSquare className="h-6 w-6" />,
       title: "WhatsApp Business",
       description: "Respuesta inmediata en horario laboral",
-      action: "Enviar WhatsApp",
+      action: "Enviar mensaje",
       highlight: "Más rápido",
       color: "border-success/20 bg-success/5",
-      href: "https://wa.me/573213212121", // +57 (Colombia) + 3213212121
+      link: "https://wa.me/573213212121"
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
@@ -31,7 +32,7 @@ const ContactSection = () => {
       action: "Conectar",
       highlight: "Profesional",
       color: "border-primary/20 bg-primary/5",
-      href: "https://www.linkedin.com/in/cata-torresg/",
+      link: "https://www.linkedin.com/in/cata-torresg/"
     },
     {
       icon: <Mail className="h-6 w-6" />,
@@ -40,15 +41,15 @@ const ContactSection = () => {
       action: "Enviar email",
       highlight: "Formal",
       color: "border-accent/20 bg-accent/5",
-      href: "mailto:catalina@digitalwao.com",
-    },
+      link: "mailto:catalina@digitalwao.com"
+    }
   ];
 
   const benefits = [
     "Consultoría inicial de 30 minutos sin costo",
     "Diagnóstico gratuito de madurez de IA",
     "Propuesta personalizada para tu empresa",
-    "Roadmap de implementación detallado",
+    "Roadmap de implementación detallado"
   ];
 
   return (
@@ -68,7 +69,7 @@ const ContactSection = () => {
             con IA?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Agenda tu consultoría gratuita y descubre exactamente cómo la IA
+            Agenda tu consultoría gratuita y descubre exactamente cómo la IA 
             puede multiplicar los resultados de tu organización.
           </p>
         </div>
@@ -77,40 +78,39 @@ const ContactSection = () => {
           {/* Contact Methods */}
           <div className="lg:col-span-2 space-y-6">
             <h3 className="text-2xl font-semibold mb-6">Elige tu método de contacto preferido</h3>
-
+            
             <div className="grid md:grid-cols-3 gap-6">
               {contactMethods.map((method, index) => (
-                <Card
-                  key={index}
-                  className={`${method.color} transition-all duration-300 hover:shadow-card group`}
-                >
+                <Card key={index} className={`${method.color} transition-all duration-300 hover:shadow-card group`}>
                   <CardContent className="p-6 text-center">
                     <div className="flex justify-center mb-4">
-                      <div className="p-3 bg-background rounded-lg shadow-sm">{method.icon}</div>
+                      <div className="p-3 bg-background rounded-lg shadow-sm">
+                        {method.icon}
+                      </div>
                     </div>
-
+                    
                     <Badge variant="outline" className="mb-3">
                       {method.highlight}
                     </Badge>
-
+                    
                     <h4 className="font-semibold mb-2">{method.title}</h4>
                     <p className="text-sm text-muted-foreground mb-4">{method.description}</p>
-
-                    <Button asChild variant="outline" size="sm" className="w-full group-hover:border-primary group-hover:text-primary transition-colors">
-                      <a
-                        href={method.href}
-                        target={method.href.startsWith("http") ? "_blank" : undefined}
-                        rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    
+                    <a href={method.link} target="_blank" rel="noopener noreferrer">
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="w-full group-hover:border-primary group-hover:text-primary transition-colors"
                       >
                         {method.action}
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            {/* Contact Form (Netlify Forms) */}
+            {/* Contact Form */}
             <Card className="shadow-card">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -119,61 +119,53 @@ const ContactSection = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {/* IMPORTANTE: Netlify Forms */}
-                <form
-                  name="contacto"
-                  method="POST"
-                  data-netlify="true"
+                {/* Formulario conectado a Netlify */}
+                <form 
+                  name="contacto" 
+                  method="POST" 
+                  data-netlify="true" 
                   data-netlify-honeypot="bot-field"
                 >
-                  {/* Hidden inputs requeridos por Netlify */}
                   <input type="hidden" name="form-name" value="contacto" />
-                  <p className="hidden">
-                    <label>
-                      No llenar: <input name="bot-field" />
-                    </label>
-                  </p>
+                  <input type="hidden" name="bot-field" />
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-2 block">Nombre completo *</label>
-                      <Input name="nombre" placeholder="Tu nombre" required />
+                      <Input placeholder="Tu nombre" name="nombre" required />
                     </div>
                     <div>
                       <label className="text-sm font-medium mb-2 block">Email corporativo *</label>
-                      <Input name="email" placeholder="tu@empresa.com" type="email" required />
+                      <Input placeholder="tu@empresa.com" type="email" name="email" required />
                     </div>
                   </div>
-
-                  <div className="grid md:grid-cols-2 gap-4 mt-4">
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-2 block">Empresa</label>
-                      <Input name="empresa" placeholder="Nombre de tu empresa" />
+                      <Input placeholder="Nombre de tu empresa" name="empresa" />
                     </div>
                     <div>
                       <label className="text-sm font-medium mb-2 block">Cargo</label>
-                      <Input name="cargo" placeholder="Tu posición" />
+                      <Input placeholder="Tu posición" name="cargo" />
                     </div>
                   </div>
 
-                  <div className="mt-4">
-                    <label className="text-sm font-medium mb-2 block">
-                      ¿Qué te gustaría lograr con IA? *
-                    </label>
-                    <Textarea
-                      name="mensaje"
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">¿Qué te gustaría lograr con IA? *</label>
+                    <Textarea 
                       placeholder="Cuéntame sobre tus objetivos, desafíos actuales o qué procesos te gustaría automatizar..."
                       rows={4}
+                      name="mensaje"
                       required
                     />
                   </div>
 
-                  <Button type="submit" variant="cta" size="lg" className="w-full mt-4">
+                  <Button variant="cta" size="lg" type="submit" className="w-full">
                     <Calendar className="mr-2 h-5 w-5" />
                     Enviar consulta y agendar llamada
                   </Button>
                 </form>
-                {/* Fin Netlify Forms */}
               </CardContent>
             </Card>
           </div>
@@ -224,7 +216,7 @@ const ContactSection = () => {
               <CardContent className="p-6 text-center">
                 <h3 className="font-semibold mb-2">⚡ Agenda limitada</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Solo acepto 5 nuevos clientes por mes para garantizar
+                  Solo acepto 5 nuevos clientes por mes para garantizar 
                   el máximo resultado en cada implementación.
                 </p>
                 <Button variant="destructive" size="sm" className="w-full">
@@ -240,3 +232,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
