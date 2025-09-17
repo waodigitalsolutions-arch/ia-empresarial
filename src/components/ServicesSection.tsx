@@ -154,21 +154,20 @@ const ServicesSection = () => {
               Agenda una consultoría gratuita de 30 minutos y descubre exactamente 
               qué servicio necesita tu empresa para liderar su industria.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="xl"
-                className="bg-white text-primary hover:bg-white/90"
+            <div className="flex justify-center">
+              <a
+                href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Agenda tu Consultoría Gratuita
-              </Button>
-              <Button 
-                variant="outline" 
-                size="xl"
-                className="border-white text-white hover:bg-white hover:text-primary"
-              >
-                Ver casos de éxito
-              </Button>
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-white text-primary hover:bg-white/90"
+                >
+                  Agenda tu Consultoría Gratuita
+                </Button>
+              </a>
             </div>
           </div>
         </div>
