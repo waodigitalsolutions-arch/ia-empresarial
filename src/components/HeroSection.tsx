@@ -26,6 +26,7 @@ const HeroSection: React.FC = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Calendly CTA */}
             <Button asChild variant="hero" size="xl" className="group">
               <a
                 href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
@@ -37,20 +38,23 @@ const HeroSection: React.FC = () => {
               </a>
             </Button>
 
-<a
-  href="https://drive.google.com/file/d/1rsI_9XBWwREtj6R_ZHnz3DxSs6Qp-faS/view?usp=drive_link"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Button
-    variant="outline"
-    size="xl"
-    className="border-primary/20 hover:border-primary"
-  >
-    Descarga tu Guía Gratuita
-  </Button>
-</a>
-
+            {/* Guía descargable (Drive) */}
+            <a
+              href="https://drive.google.com/file/d/1rsI_9XBWwREtj6R_ZHnz3DxSs6Qp-faS/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-primary/20 hover:border-primary"
+              >
+                Descarga tu Guía Gratuita
+              </Button>
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Decoración opcional */}
       <div className="pointer-events-none absolute top-20 right-10 w-20 h-20 bg-accent/10 rounded-full blur-3xl animate-pulse" />
