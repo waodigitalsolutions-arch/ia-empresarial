@@ -5,9 +5,9 @@ type Item = { title: string; points: string[]; icon: JSX.Element };
 const antesCol: Item[] = [
   {
     icon: (
-    <div className="p-3 rounded-xl bg-red-100 text-red-600">
-      <AlertTriangle className="h-6 w-6" />
-    </div>
+      <div className="p-3 rounded-xl bg-red-100 text-red-600">
+        <AlertTriangle className="h-6 w-6" />
+      </div>
     ),
     title: "Uso improvisado de IA",
     points: [
@@ -19,9 +19,9 @@ const antesCol: Item[] = [
   },
   {
     icon: (
-    <div className="p-3 rounded-xl bg-red-100 text-red-600">
-      <Timer className="h-6 w-6" />
-    </div>
+      <div className="p-3 rounded-xl bg-red-100 text-red-600">
+        <Timer className="h-6 w-6" />
+      </div>
     ),
     title: "Adopción lenta y costosa",
     points: [
@@ -36,9 +36,9 @@ const antesCol: Item[] = [
 const ahoraCol: Item[] = [
   {
     icon: (
-    <div className="p-3 rounded-xl bg-emerald-100 text-emerald-600">
-      <Target className="h-6 w-6" />
-    </div>
+      <div className="p-3 rounded-xl bg-emerald-100 text-emerald-600">
+        <Target className="h-6 w-6" />
+      </div>
     ),
     title: "IA estratégica y segura",
     points: [
@@ -50,9 +50,9 @@ const ahoraCol: Item[] = [
   },
   {
     icon: (
-    <div className="p-3 rounded-xl bg-emerald-100 text-emerald-600">
-      <CheckCircle className="h-6 w-6" />
-    </div>
+      <div className="p-3 rounded-xl bg-emerald-100 text-emerald-600">
+        <CheckCircle className="h-6 w-6" />
+      </div>
     ),
     title: "Transformación acelerada",
     points: [
@@ -78,13 +78,7 @@ const BulletPos = ({ children }: { children: React.ReactNode }) => (
   </li>
 );
 
-const Card = ({
-  item,
-  tone,
-}: {
-  item: Item;
-  tone: "neg" | "pos";
-}) => {
+const Card = ({ item, tone }: { item: Item; tone: "neg" | "pos" }) => {
   const styles =
     tone === "neg"
       ? "border-red-200 bg-red-50"
@@ -96,9 +90,7 @@ const Card = ({
     <div className={`rounded-2xl border ${styles} p-6 md:p-7`}>
       <div className="flex items-center gap-3 mb-4">
         {item.icon}
-        <h3 className={`text-xl font-semibold ${titleColor}`}>
-          {item.title}
-        </h3>
+        <h3 className={`text-xl font-semibold ${titleColor}`}>{item.title}</h3>
       </div>
       <ul className="space-y-3">
         {item.points.map((p, i) => (
@@ -113,15 +105,15 @@ const ComparisonSection = () => {
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Encabezados de columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-6">
-          <div className="text-center md:text-left">
+        {/* Encabezados de columnas centrados */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-6 text-center">
+          <div>
             <h2 className="text-3xl font-bold text-red-500">Antes</h2>
             <p className="text-muted-foreground mt-2">
               Así trabajan la mayoría de empresas
             </p>
           </div>
-          <div className="text-center md:text-left">
+          <div>
             <h2 className="text-3xl font-bold text-emerald-600">Ahora</h2>
             <p className="text-muted-foreground mt-2">
               Así trabajas con nuestra metodología
@@ -129,7 +121,7 @@ const ComparisonSection = () => {
           </div>
         </div>
 
-        {/* Grid 2x2: izquierda (negativo), derecha (positivo) */}
+        {/* Grid 2x2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           <div className="space-y-8">
             {antesCol.map((item, i) => (
@@ -148,4 +140,5 @@ const ComparisonSection = () => {
 };
 
 export default ComparisonSection;
+
 
