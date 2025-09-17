@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-ia-empresarial.png"; // 👈 importa tu logo (sin espacios en el nombre)
+import logo from "@/assets/logo-ia-empresarial.png"; // 👈 import corregido en minúsculas
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="IA Empresarial"
-              className="h-10 w-auto" // 👈 ajusta la altura aquí
+              className="h-10 w-auto" // 👈 tamaño ajustado
             />
             <span className="text-xl font-bold text-foreground">
               IA Empresarial
@@ -102,4 +102,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
