@@ -62,10 +62,16 @@ const LeadMagnetSection = () => {
 
             {/* CTA */}
             <div className="space-y-4">
-              <Button variant="cta" size="xl" className="w-full md:w-auto">
-                <Download className="mr-2 h-5 w-5" />
-                Descargar Guía Gratuita (PDF)
-              </Button>
+              <a
+                href="https://drive.google.com/file/d/1rsI_9XBWwREtj6R_ZHnz3DxSs6Qp-faS/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="cta" size="xl" className="w-full md:w-auto">
+                  <Download className="mr-2 h-5 w-5" />
+                  Descargar Guía Gratuita (PDF)
+                </Button>
+              </a>
               <p className="text-sm text-muted-foreground">
                 ✓ Sin spam ✓ Descarga inmediata ✓ 100% gratuito
               </p>
