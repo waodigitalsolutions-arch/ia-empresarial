@@ -18,17 +18,17 @@ const AboutSection = () => {
     {
       icon: <GraduationCap className="h-5 w-5" />,
       title: "Educación Especializada",
-      description: "Maestría en Sistemas de Información e Inteligencia Artificial"
+      description: "Growth Marketing e Inteligencia Artificial"
     },
     {
       icon: <Building className="h-5 w-5" />,
       title: "Experiencia Corporativa",
-      description: "8+ años en transformación digital en empresas Fortune 500"
+      description: "8+ años en transformación digital en empresas"
     },
     {
       icon: <Globe className="h-5 w-5" />,
       title: "Certificaciones Internacionales",
-      description: "Google AI, Microsoft Azure AI, AWS Machine Learning"
+      description: "American Business College"
     },
     {
       icon: <Users className="h-5 w-5" />,
@@ -38,7 +38,7 @@ const AboutSection = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: "Profesionales capacitados" },
+    { number: "500+", label: "Tareas automatizadas" },
     { number: "85%", label: "Aumento productividad" },
     { number: "250%", label: "ROI promedio generado" },
     { number: "98%", label: "Índice de satisfacción" }
@@ -57,22 +57,22 @@ const AboutSection = () => {
               </Badge>
               
               <h2 className="text-3xl md:text-4xl font-bold">
-                La consultora que las empresas{" "}
+                La consultoría que las empresas{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   necesitan para liderar con IA
                 </span>
               </h2>
               
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Soy consultora especializada 100% en implementación 
-                segura y rentable de IA para empresas. Mi misión es democratizar el acceso 
+                Como consultores especializados 100% en implementación 
+                segura y rentable de IA para empresas. Nuestra misión es democratizar el acceso 
                 a estas tecnologías y hacer que cada organización las use de forma estratégica.
               </p>
             </div>
 
             {/* Why me */}
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold">¿Por qué elegir mi consultoría?</h3>
+              <h3 className="text-xl font-semibold">¿Por qué elegir nuestra consultoría?</h3>
               
               <div className="space-y-4">
                 {[
@@ -106,14 +106,29 @@ const AboutSection = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="lg">
-                <Linkedin className="mr-2 h-5 w-5" />
-                Conectar en LinkedIn
-              </Button>
-              <Button variant="outline" size="lg">
-                <Mail className="mr-2 h-5 w-5" />
-                Enviar mensaje
-              </Button>
+              {/* Botón LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/cata-torresg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button variant="cta" size="lg" className="w-full">
+                  <Linkedin className="mr-2 h-5 w-5" />
+                  Conectar en LinkedIn
+                </Button>
+              </a>
+
+              {/* Botón Correo */}
+              <a
+                href="mailto:catalina@digitalwao.com"
+                className="w-full sm:w-auto"
+              >
+                <Button variant="outline" size="lg" className="w-full">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Enviar mensaje
+                </Button>
+              </a>
             </div>
           </div>
 
