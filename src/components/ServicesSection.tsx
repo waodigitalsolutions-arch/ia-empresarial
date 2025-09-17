@@ -69,10 +69,10 @@ const ServicesSection = () => {
   ];
 
   const stats = [
-    { icon: <Users />, value: "500+", label: "Profesionales capacitados" },
-    { icon: <Shield />, value: "100%", label: "Implementación segura" },
-    { icon: <BookOpen />, value: "50+", label: "Empresas auditadas" },
-    { icon: <Zap />, value: "3x", label: "Aumento productividad promedio" }
+    { icon: <Users />, value: "+10 años", label: "Experiencia combinada en IA y estrategia empresarial" },
+    { icon: <Shield />, value: "100%", label: "Metodología adaptada a la normativa LATAM" },
+    { icon: <BookOpen />, value: "50+", label: "Casos de estudio internacionales analizados" },
+    { icon: <Zap />, value: "3x", label: "Retorno estimado en productividad con IA" }
   ];
 
   return (
@@ -112,7 +112,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`${service.color} transition-all duration-300 hover:shadow-card group cursor-pointer`}
+              className={`${service.color} transition-all duration-300 hover:shadow-card group`}
             >
               <CardHeader>
                 <div className="flex items-center gap-4 mb-4">
@@ -130,7 +130,7 @@ const ServicesSection = () => {
               </CardHeader>
               
               <CardContent className="pt-0">
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <ArrowRight className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
@@ -138,14 +138,7 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:border-primary group-hover:text-primary transition-colors"
-                >
-                  Más información
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                {/* Botón "Más información" eliminado */}
               </CardContent>
             </Card>
           ))}

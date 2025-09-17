@@ -126,29 +126,31 @@ const ComparisonSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-card p-8 rounded-2xl shadow-card border border-border/50 max-w-2xl mx-auto">
-            <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">
-              No permitas que tu empresa se quede atrás
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Cada día que pasas sin una estrategia de IA clara es una oportunidad perdida 
-              frente a tu competencia.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors font-semibold">
-                Agenda tu Diagnóstico Gratuito
-              </button>
-              <button className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/5 transition-colors">
-                Descarga la Guía IA Empresarial
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+<div className="text-center mt-16">
+  <div className="bg-card p-8 rounded-2xl shadow-card border border-border/50 max-w-2xl mx-auto">
+    <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
+    <h3 className="text-2xl font-bold mb-4">
+      No permitas que tu empresa se quede atrás
+    </h3>
+    <p className="text-muted-foreground mb-6">
+      Cada día que pasas sin una estrategia de IA clara es una oportunidad perdida 
+      frente a tu competencia.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="https://calendly.com/wao-digital-solutions/diagnostico-ia"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors font-semibold text-center"
+      >
+        Agenda tu Diagnóstico Gratuito
+      </a>
+      <button className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/5 transition-colors">
+        Descarga la Guía IA Empresarial
+      </button>
+    </div>
+  </div>
+</div>
+
 
 export default ComparisonSection;
